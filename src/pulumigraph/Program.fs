@@ -270,7 +270,7 @@ module Neo4j =
     open Neo4j.Driver
 
     let connect() =
-        GraphDatabase.Driver("bolt://localhost:7687")
+        GraphDatabase.Driver("bolt://neo4j:7687")
 
     let runTask a = a |> Async.AwaitTask |> Async.RunSynchronously
     let deleteAll (client: IDriver) =
